@@ -1,0 +1,774 @@
+/* Modern Minimalist Theme for PDF Book Reader */
+
+.root {
+    -fx-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #f8fafc;
+    -fx-background-color: #f8fafc;
+}
+
+/* Top App Bar */
+.top-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 4, 0, 0, 2);
+}
+
+.app-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1e293b;
+}
+
+.version-badge {
+    -fx-background-color: #e0e7ff;
+    -fx-text-fill: #4338ca;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 12px;
+}
+
+/* App Shell / Sidebar */
+.content-stack {
+    -fx-background-color: #f8fafc;
+}
+
+.app-sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent #e2e8f0 transparent transparent;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.sidebar-section-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #64748b;
+    -fx-text-transform: uppercase;
+}
+
+.sidebar-nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #334155;
+    -fx-font-weight: 700;
+    -fx-padding: 9px 10px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.sidebar-nav-btn:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #0f172a;
+}
+
+.sidebar-nav-selected {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1d4ed8;
+}
+
+.sidebar-action-btn {
+    -fx-alignment: center-left;
+}
+
+.sidebar-status-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-padding: 8px 10px;
+    -fx-background-radius: 6px;
+}
+
+.sidebar-status-label.signed-in {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #15803d;
+}
+
+.sidebar-status-label.signed-out {
+    -fx-background-color: #fef3c7;
+    -fx-text-fill: #b45309;
+}
+
+.sidebar-muted-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+.home-panel {
+    -fx-background-color: #f8fafc;
+}
+
+.home-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #0f172a;
+}
+
+.home-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+}
+
+.home-card-row {
+    -fx-alignment: center-left;
+}
+
+.home-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 5, 0, 0, 1);
+}
+
+.home-card:hover {
+    -fx-border-color: #93c5fd;
+    -fx-background-color: #f8fbff;
+}
+
+.home-card-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #334155;
+}
+
+.home-card-value {
+    -fx-font-size: 16px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #0f172a;
+}
+
+.home-drive-summary {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 12px;
+}
+
+/* Library Panels */
+.library-panel {
+    -fx-background-color: #ffffff;
+}
+
+.panel-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1e293b;
+}
+
+.count-badge {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #475569;
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-padding: 2px 7px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10px;
+}
+
+.status-badge {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 12px;
+}
+
+.status-badge-connected {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #15803d;
+    -fx-border-color: #bbf7d0;
+    -fx-border-radius: 12px;
+}
+
+.status-badge-disconnected {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #b91c1c;
+    -fx-border-color: #fecaca;
+    -fx-border-radius: 12px;
+}
+
+/* Search Field */
+.search-field {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 12px;
+}
+
+.search-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3b82f6;
+    -fx-effect: dropshadow(three-pass-box, rgba(59,130,246,0.2), 3, 0, 0, 0);
+}
+
+/* Tables */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-weight: 600;
+    -fx-text-fill: #475569;
+    -fx-padding: 8px 6px;
+}
+
+.table-view .table-row-cell {
+    -fx-border-color: transparent transparent #f1f5f9 transparent;
+    -fx-border-width: 1px;
+    -fx-cell-size: 54px;
+    -fx-cursor: hand;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #fafbfc;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f0fdf4;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e0f2fe;
+    -fx-text-fill: #0369a1;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: #0369a1;
+    -fx-font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    -fx-background-radius: 6px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 7px 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 2, 0, 0, 1);
+}
+
+.btn-primary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #334155;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6px;
+}
+
+.btn-secondary > .label {
+    -fx-text-fill: #334155;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focused,
+.btn-secondary:showing {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #94a3b8;
+    -fx-text-fill: #0f172a;
+}
+
+.btn-secondary:hover > .label,
+.btn-secondary:focused > .label,
+.btn-secondary:showing > .label {
+    -fx-text-fill: #0f172a;
+}
+
+.btn-danger {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #dc2626;
+    -fx-border-color: #fca5a5;
+    -fx-border-radius: 6px;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #fecaca;
+}
+
+.btn-sm {
+    -fx-padding: 4px 10px;
+    -fx-font-size: 12px;
+}
+
+.icon-btn {
+    -fx-min-width: 34px;
+    -fx-min-height: 34px;
+    -fx-pref-width: 34px;
+    -fx-pref-height: 34px;
+    -fx-max-width: 34px;
+    -fx-max-height: 34px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+}
+
+/* Status Bar */
+.status-bar {
+    -fx-background-color: #f1f5f9;
+    -fx-border-color: #e2e8f0 transparent transparent transparent;
+    -fx-border-width: 1px;
+}
+
+.status-message {
+    -fx-text-fill: #475569;
+    -fx-font-size: 12px;
+}
+
+/* Split Pane */
+.split-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.split-pane-divider {
+    -fx-background-color: #e2e8f0;
+    -fx-padding: 0 1px;
+}
+
+/* Embedded PDF Reader View */
+.pdf-reader-view {
+    -fx-background-color: #334155;
+}
+
+.reader-toolbar {
+    -fx-background-color: #1e293b;
+    -fx-padding: 8px 12px;
+    -fx-border-color: transparent transparent #0f172a transparent;
+    -fx-border-width: 1px;
+}
+
+.reader-toolbar .button {
+    -fx-background-color: #334155;
+    -fx-text-fill: #f8fafc;
+    -fx-background-radius: 4px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+}
+
+.reader-toolbar .button:hover {
+    -fx-background-color: #475569;
+}
+
+.reader-toolbar .text-field {
+    -fx-background-color: #0f172a;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #475569;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.reader-toolbar .combo-box {
+    -fx-background-color: #334155;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-border-color: #475569;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.reader-toolbar .combo-box:hover {
+    -fx-background-color: #475569;
+}
+
+.reader-toolbar .combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 600;
+}
+
+.reader-toolbar .combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 4px 0 0;
+}
+
+.reader-toolbar .combo-box .arrow {
+    -fx-background-color: #f8fafc;
+}
+
+/* Zoom Dropdown Popup — Match Book Reading Background (#1e293b) */
+.combo-box-popup .list-view {
+    -fx-background-color: #1e293b;
+    -fx-background: #1e293b;
+    -fx-border-color: #475569;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 12, 0, 0, 4);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: #f8fafc;
+    -fx-font-size: 13px;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 4px;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #334155;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.reader-book-title {
+    -fx-text-fill: #f8fafc;
+    -fx-font-weight: 700;
+    -fx-font-size: 14px;
+}
+
+.reader-page-label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-weight: 600;
+}
+
+.reader-scroll-pane {
+    -fx-background-color: #1e293b;
+    -fx-background: #1e293b;
+    -fx-border-color: transparent;
+}
+
+.reader-viewport-container {
+    -fx-background-color: #1e293b;
+}
+
+.reader-viewport-container .image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 15, 0, 0, 4);
+}
+
+/* Book Cover Thumbnails in Table */
+.book-thumb-image {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.18), 4, 0, 0, 1);
+}
+
+/* Selected Book Preview Card */
+.selected-book-card {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 12px;
+}
+
+.preview-cover-thumb {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.22), 6, 0, 0, 2);
+}
+
+.preview-title {
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e293b;
+}
+
+.preview-details {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+/* Floating On-Screen Side Navigation Buttons */
+.floating-side-btn {
+    -fx-background-color: rgba(15, 23, 42, 0.55);
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+    -fx-background-radius: 24px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.35), 8, 0, 0, 2);
+}
+
+.floating-side-btn:hover {
+    -fx-background-color: rgba(37, 99, 235, 0.9);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.floating-side-btn:pressed {
+    -fx-background-color: rgba(29, 78, 216, 0.95);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.floating-side-btn:disabled {
+    -fx-opacity: 0.2;
+}
+
+/* Two-Page Spread & Spine */
+.book-spread-container {
+    -fx-alignment: center;
+    -fx-spacing: 0px;
+}
+
+.book-spine-divider {
+    -fx-background-color: linear-gradient(to right, #0f172a, #334155, #0f172a);
+    -fx-pref-width: 6px;
+    -fx-min-width: 6px;
+    -fx-max-width: 6px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+}
+
+/* Bookshelf / Icons View */
+.bookshelf-scroll-pane {
+    -fx-background-color: #f8fafc;
+    -fx-background: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 6px;
+}
+
+.bookshelf-grid {
+    -fx-background-color: #f8fafc;
+    -fx-alignment: top-left;
+}
+
+.book-card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-pref-width: 120px;
+    -fx-max-width: 120px;
+    -fx-pref-height: 190px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 4, 0, 0, 1);
+}
+
+.book-card:hover {
+    -fx-background-color: #f0f9ff;
+    -fx-border-color: #38bdf8;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(three-pass-box, rgba(56,189,248,0.25), 8, 0, 0, 2);
+}
+
+.book-card-selected {
+    -fx-background-color: #e0f2fe;
+    -fx-border-color: #0284c7;
+    -fx-border-width: 2px;
+}
+
+.book-card-cover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0, 0, 2);
+}
+
+.book-card-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1e293b;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.book-card-size {
+    -fx-font-size: 10px;
+    -fx-text-fill: #64748b;
+    -fx-text-alignment: center;
+}
+
+/* Shared Link Card */
+.shared-link-card {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 12px;
+}
+
+.shared-link-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #334155;
+}
+
+.shared-link-hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+}
+
+/* MenuButton & Dropdown Menus */
+.menu-button {
+    -fx-background-radius: 6px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-text-fill: #1e293b;
+}
+
+.menu-button > .label {
+    -fx-text-fill: #1e293b;
+}
+
+.menu-button:hover,
+.menu-button:focused,
+.menu-button:showing,
+.menu-button:hover > .label,
+.menu-button:focused > .label,
+.menu-button:showing > .label {
+    -fx-text-fill: #0f172a;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0 0 0 6px;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-background-color: #64748b;
+}
+
+.dropdown-menu-btn,
+.dropdown-menu-btn > .label {
+    -fx-text-fill: #1e293b;
+}
+
+.dropdown-menu-btn:hover,
+.dropdown-menu-btn:focused,
+.dropdown-menu-btn:showing,
+.dropdown-menu-btn:hover > .label,
+.dropdown-menu-btn:focused > .label,
+.dropdown-menu-btn:showing > .label {
+    -fx-text-fill: #0f172a;
+}
+
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 10, 0, 0, 4);
+}
+
+.menu-item {
+    -fx-background-radius: 4px;
+    -fx-padding: 6px 14px;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-text-fill: #1e293b;
+}
+
+.menu-item > .label,
+.radio-menu-item > .label,
+.check-menu-item > .label {
+    -fx-text-fill: #1e293b;
+}
+
+.menu-item:hover,
+.menu-item:focused,
+.menu-item:showing,
+.menu-item:armed,
+.radio-menu-item:hover,
+.radio-menu-item:focused,
+.radio-menu-item:showing,
+.radio-menu-item:armed,
+.check-menu-item:hover,
+.check-menu-item:focused {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #0f172a;
+}
+
+.menu-item:hover > .label,
+.menu-item:focused > .label,
+.menu-item:showing > .label,
+.menu-item:armed > .label,
+.radio-menu-item:hover > .label,
+.radio-menu-item:focused > .label,
+.radio-menu-item:showing > .label,
+.radio-menu-item:armed > .label,
+.check-menu-item:hover > .label,
+.check-menu-item:focused > .label {
+    -fx-text-fill: #0f172a;
+}
+
+.radio-menu-item > .left-container > .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #94a3b8;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.radio-menu-item:checked > .left-container > .radio {
+    -fx-background-color: #2563eb;
+    -fx-border-color: #2563eb;
+}
+
+/* Status Badges */
+.status-badge {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 12px;
+}
+
+.status-badge-connected {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #15803d;
+}
+
+.status-badge-disconnected {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #64748b;
+}
+
+.status-badge-editor {
+    -fx-background-color: #dbeafe;
+    -fx-text-fill: #1d4ed8;
+}
+
+.status-badge-commenter {
+    -fx-background-color: #f3e8ff;
+    -fx-text-fill: #7e22ce;
+}
+
+.status-badge-viewer {
+    -fx-background-color: #fef3c7;
+    -fx-text-fill: #b45309;
+}
+
+/* Folder Summary Bar (When Shared Folder Card is Collapsed) */
+.folder-summary-bar {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 6px 10px;
+}
+
+.folder-summary-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+}

@@ -1,0 +1,38 @@
+# --- Build Output ---
+target/
+dist/
+installer-dist/
+
+# --- IDE Files ---
+.idea/
+*.iml
+.vscode/
+*.class
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Runtime Config (contains personal settings & paths) ---
+pdf_book_reader_config.json
+
+# --- Google Drive OAuth Credentials (NEVER commit these) ---
+credentials.json
+tokens/
+
+# --- Maven Wrapper JAR (downloaded automatically) ---
+.mvn/wrapper/maven-wrapper.jar
+
+# --- Logs ---
+*.log
+hs_err_pid*.log
+
+# --- Temporary Files ---
+*.tmp
+*.bak
+*.swp
+*~
+
+# --- Local Books (user content, not source code) ---
+Books/
